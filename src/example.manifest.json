@@ -2,9 +2,14 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "7.6.0",
+  "version": "7.6.1",
   "manifest_version": 3,
+  "key": "key",
   "default_locale": "en_GB",
+  "oauth2": {
+    "client_id": "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/drive.appdata"]
+  },
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
@@ -13,5 +18,6 @@
     "48": "icon/icon-48.png",
     "128": "icon/icon-128.png",
     "512": "icon/icon-512.png"
-  }
+  },
+  "permissions": ["storage", "identity"]
 }

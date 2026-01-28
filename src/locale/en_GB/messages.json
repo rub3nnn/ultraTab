@@ -1739,6 +1739,78 @@
     "message": "Show Edit control",
     "description": "Checkbox to show bookmark group toolbar edit control."
   },
+  "menuNavDataSubNavSync": {
+    "message": "Google Drive sync",
+    "description": "Sub navigation for Google Drive sync."
+  },
+  "menuContentDataSyncConnect": {
+    "message": "Connect to Google Drive",
+    "description": "Button to connect to Google Drive."
+  },
+  "menuContentDataSyncConnected": {
+    "message": "Connected to Google Drive",
+    "description": "Status message when connected to Google Drive."
+  },
+  "menuContentDataSyncDisconnect": {
+    "message": "Disconnect",
+    "description": "Button to disconnect from Google Drive."
+  },
+  "menuContentDataSyncUpload": {
+    "message": "Upload backup to Drive",
+    "description": "Button to upload backup to Google Drive."
+  },
+  "menuContentDataSyncDownload": {
+    "message": "Download and restore from Drive",
+    "description": "Button to download and restore backup from Google Drive."
+  },
+  "menuContentDataSyncDelete": {
+    "message": "Delete from Drive",
+    "description": "Button to delete backup from Google Drive."
+  },
+  "menuContentDataSyncLastUpload": {
+    "message": "Last upload",
+    "description": "Label for last upload timestamp."
+  },
+  "menuContentDataSyncNever": {
+    "message": "Never",
+    "description": "Text when no upload has been made."
+  },
+  "menuContentDataSyncHelperPara1": {
+    "message": "Sync your {appName} data with Google Drive.",
+    "description": "Helper text for Google Drive sync."
+  },
+  "menuContentDataSyncHelperPara2": {
+    "message": "Your data is stored securely in a hidden Google Drive folder accessible only by this extension.",
+    "description": "Helper text for Google Drive sync security."
+  },
+  "menuContentDataSyncSuccessUpload": {
+    "message": "Successfully uploaded to Google Drive",
+    "description": "Success message for upload."
+  },
+  "menuContentDataSyncSuccessDownload": {
+    "message": "Successfully downloaded and restored from Google Drive",
+    "description": "Success message for download."
+  },
+  "menuContentDataSyncSuccessDelete": {
+    "message": "Successfully deleted from Google Drive",
+    "description": "Success message for delete."
+  },
+  "menuContentDataSyncErrorConnect": {
+    "message": "Failed to connect to Google Drive",
+    "description": "Error message for connection failure."
+  },
+  "menuContentDataSyncErrorUpload": {
+    "message": "Failed to upload to Google Drive",
+    "description": "Error message for upload failure."
+  },
+  "menuContentDataSyncErrorDownload": {
+    "message": "Failed to download from Google Drive",
+    "description": "Error message for download failure."
+  },
+  "menuContentDataSyncErrorNoData": {
+    "message": "No backup found in Google Drive",
+    "description": "Error message when no backup exists."
+  },
   "menuContentDataRestoreFile": {
     "message": "Import from file",
     "description": "Input for backup data file import."
