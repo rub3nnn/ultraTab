@@ -393,9 +393,7 @@ dataSetting.sync = (parent) => {
   parent.appendChild(
     node("div", [
       container,
-      form.wrap({
-        children: [dataSetting.control.sync.feedback],
-      }),
+      //form.wrap({children: [dataSetting.control.sync.feedback],}),
       dataSetting.control.sync.helper.wrap(),
     ]),
   );
