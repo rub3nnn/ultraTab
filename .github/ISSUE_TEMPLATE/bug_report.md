@@ -30,7 +30,7 @@ If applicable, add screenshots to help explain your problem.
 - OS: [e.g. iOS]
 - Browser [e.g. chrome, safari]
 - Version [e.g. 22]
-- nightTab version [e.g. 6.0.0]
+- ultraTab version [e.g. 6.0.0]
 
 **Additional context**
 Add any other context about the problem here.

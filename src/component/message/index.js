@@ -1,10 +1,10 @@
-import { APP_NAME } from '../../constant';
+import { APP_NAME } from "../../constant";
 
-import { browserDetect } from '../browserDetect';
+import { browserDetect } from "../browserDetect";
 
 // import { default as bn } from '../../locale/bn/messages.json';
 // import { default as de } from '../../locale/de/messages.json';
-import { default as en_GB } from '../../locale/en_GB/messages.json';
+import { default as en_GB } from "../../locale/en_GB/messages.json";
 // import { default as en_US } from '../../locale/en_US/messages.json';
 // import { default as es } from '../../locale/es/messages.json';
 // import { default as fil } from '../../locale/fil/messages.json';
@@ -24,7 +24,7 @@ const message = {};
 
 message.language = {
   // pack: { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi }
-  pack: { en_GB }
+  pack: { en_GB },
 };
 
 // message.language.list = () => {
@@ -72,41 +72,30 @@ message.language = {
 // message.language.code = () => message.language.list().map(item => item.code);
 
 message.get = (stringId) => {
-
   let string;
 
-  if (browserDetect().chrome && typeof chrome != 'undefined') {
+  if (browserDetect().chrome && typeof chrome != "undefined") {
     // if browser is chrome
 
-    if ('i18n' in chrome) {
+    if ("i18n" in chrome) {
       // if installed as extension
 
       string = chrome.i18n.getMessage(stringId);
-
     } else {
-
       string = message.language.pack.en_GB[stringId].message;
-
     }
-
-  } else if (browserDetect().firefox && typeof browser != 'undefined') {
+  } else if (browserDetect().firefox && typeof browser != "undefined") {
     // if browser is firefox
 
-    if ('i18n' in browser) {
+    if ("i18n" in browser) {
       // if installed as addon
 
       string = browser.i18n.getMessage(stringId);
-
     } else {
-
       string = message.language.pack.en_GB[stringId].message;
-
     }
-
   } else {
-
     string = message.language.pack.en_GB[stringId].message;
-
   }
 
   // switch (state.get.current().language) {
@@ -169,14 +158,11 @@ message.get = (stringId) => {
   //
   // }
 
-  if (string && string.indexOf('{appName}') > -1) {
-
-    string = string.replaceAll('{appName}', APP_NAME);
-
+  if (string && string.indexOf("{appName}") > -1) {
+    string = string.replaceAll("{appName}", APP_NAME);
   }
 
   return string;
-
 };
 
 export { message };

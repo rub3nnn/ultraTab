@@ -7,13 +7,16 @@
  *
  * Stores data in Google Drive's hidden appDataFolder as nighttab_sync_data.json
  */
+
+import { APP_NAME } from "../constant/index.js";
+
 class GoogleDriveService {
   constructor() {
     if (GoogleDriveService.instance) {
       return GoogleDriveService.instance;
     }
 
-    this.FILE_NAME = "nighttab_sync_data.json";
+    this.FILE_NAME = APP_NAME + "_sync_data.json";
     this.FOLDER = "appDataFolder";
     this.DISCONNECT_FLAG_KEY = "googleDrive_manuallyDisconnected";
     this.token = null;
@@ -392,6 +395,34 @@ class GoogleDriveService {
       console.error("[GoogleDriveService] Load failed:", error);
       throw error;
     }
+  }
+
+  /**
+   * Alias for load() - Download JSON data from Google Drive
+   * @returns {Promise<object|null>} - Parsed JSON data or null if file doesn't exist
+   */
+  async download() {
+    return this.load();
+  }
+
+  /**
+   * Initialize and auto-download if authenticated
+   * @returns {Promise<{authenticated: boolean, data: object|null}>}
+   */
+  async initializeAndDownload() {
+    const authenticated = await this.initialize();
+
+    if (authenticated) {
+      try {
+        const data = await this.load();
+        return { authenticated: true, data };
+      } catch (error) {
+        console.error("[GoogleDriveService] Failed to auto-download:", error);
+        return { authenticated: true, data: null };
+      }
+    }
+
+    return { authenticated: false, data: null };
   }
 
   /**

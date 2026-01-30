@@ -15,6 +15,10 @@
     "message": "Depurar",
     "description": "Label for the settings menu navigation."
   },
+  "menuNavDebugSubNavShowcase": {
+    "message": "Escaparate",
+    "description": "Label for the settings menu navigation."
+  },
   "menuNavDebugSubNavInput": {
     "message": "Aporte",
     "description": "Label for the settings menu navigation."
@@ -64,11 +68,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShadow": {
-    "message": "Sombra",
+    "message": "Sombra del menú",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShade": {
-    "message": "Sombra",
+    "message": "Forma de la sombra",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavOpacity": {
@@ -836,7 +840,7 @@
     "description": "Range for header area background opacity."
   },
   "menuContentThemeBookmarkColorLabel": {
-    "message": "Color de fondo del marcador",
+    "message": "Color de fondo de los marcadores",
     "description": "Label for bookmark area colour."
   },
   "menuContentThemeBookmarkColorByTransparentLabel": {
@@ -844,7 +848,7 @@
     "description": "Radio for transparent bookmark area background."
   },
   "menuContentThemeBookmarkColorByTransparentDescription": {
-    "message": "No hay color de fondo detrás del área del marcador.",
+    "message": "No hay color de fondo detrás del área de los marcadores.",
     "description": "Description for transparent bookmark area background."
   },
   "menuContentThemeBookmarkColorByCustomLabel": {
@@ -852,11 +856,11 @@
     "description": "Radio for colour bookmark area background."
   },
   "menuContentThemeBookmarkColorByCustomDescription": {
-    "message": "Utilice un color personalizado detrás del área del marcador.",
+    "message": "Utilice un color personalizado detrás del área de los marcadores.",
     "description": "Description for colour bookmark area background."
   },
   "menuContentThemeBookmarkColorColor": {
-    "message": "Color de fondo del marcador",
+    "message": "Color de fondo de los marcadores",
     "description": "Label for bookmark area background colour."
   },
   "menuContentThemeBookmarkColorOpacity": {
@@ -864,11 +868,11 @@
     "description": "Range for bookmark area background opacity."
   },
   "menuContentThemeBookmarkItemBorderLabel": {
-    "message": "Borde del marcador",
+    "message": "Borde de los marcadores",
     "description": "Label for bookmark item border."
   },
   "menuContentThemeBookmarkItemBorderHelperPara1": {
-    "message": "El borde del marcador también se puede cambiar al editar marcadores individuales.",
+    "message": "El borde de los marcadores también se puede cambiar al editar marcadores individuales.",
     "description": "Helper text for bookmark border."
   },
   "menuContentThemeBookmarkItemBorderHelperPara2": {

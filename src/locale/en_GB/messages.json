@@ -19,8 +19,20 @@
     "message": "Showcase",
     "description": "Label for the settings menu navigation."
   },
+  "menuNavDebugSubNavInput": {
+    "message": "Input",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Button",
+    "description": "Label for the settings menu navigation."
+  },
   "menuNavDebugSubNavBookmark": {
     "message": "Bookmark",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Icon",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeLabel": {
@@ -1966,6 +1978,14 @@
   "menuContentAppLink3": {
     "message": "GNU General Public Licence v3.0.",
     "description": "Link to project project licence."
+  },
+  "menuContentAppForkInfo": {
+    "message": "Fork of nightTab.",
+    "description": "Link to old project on GitHub."
+  },
+  "menuContentAppForkLink": {
+    "message": "Discover the original project.",
+    "description": "Link to old project on GitHub."
   },
   "bookmarkTileControlLeft": {
     "message": "Move this bookmark left",
