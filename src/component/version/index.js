@@ -1,17 +1,15 @@
 export const version = {};
 
-version.number = '7.6.0';
+version.number = "7.7.0";
 
-version.name = 'Nebulous Lobster';
+version.name = "BETA VERSION";
 
 version.compare = (a, b) => {
+  let pa = a.split(".");
 
-  let pa = a.split('.');
-
-  let pb = b.split('.');
+  let pb = b.split(".");
 
   for (let i = 0; i < 3; i++) {
-
     let na = Number(pa[i]);
 
     let nb = Number(pb[i]);
@@ -31,7 +29,6 @@ version.compare = (a, b) => {
     if (isNaN(na) && !isNaN(nb)) {
       return -1;
     }
-
   }
 
   return 0;

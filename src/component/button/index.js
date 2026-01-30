@@ -1,13 +1,13 @@
-import { icon } from '../icon';
+import { icon } from "../icon";
 
-import * as form from '../form';
+import * as form from "../form";
 
-import { node } from '../../utility/node';
+import { node } from "../../utility/node";
 
-import './index.css';
+import "./index.css";
 
-export const Button = function({
-  text = 'Button',
+export const Button = function ({
+  text = "Button",
   srOnly = false,
   iconName = false,
   iconPosition = false,
@@ -16,56 +16,56 @@ export const Button = function({
   style = [],
   title = false,
   classList = [],
-  func = false
+  func = false,
+  disabled = false,
 } = {}) {
+  this.button = node("button|class:button,tabindex:1,type:button");
 
-  this.button = node('button|class:button,tabindex:1,type:button');
+  if (disabled) {
+    this.button.disabled = true;
+  }
 
-  this.buttonText = node('span|class:button-text');
+  this.buttonText = node("span|class:button-text");
 
   if (text) {
     this.buttonText.textContent = text;
 
     if (srOnly) {
-      this.buttonText.classList.add('sr-only');
+      this.buttonText.classList.add("sr-only");
     }
 
     this.button.appendChild(this.buttonText);
   }
 
   if (iconName) {
-
     switch (iconPosition) {
-
-      case 'right':
+      case "right":
         this.button.append(icon.render(iconName));
         break;
 
       default:
-      case 'left':
+      case "left":
         this.button.prepend(icon.render(iconName));
         break;
-
     }
-
   }
 
   if (block) {
-    this.button.classList.add('button-block');
+    this.button.classList.add("button-block");
   }
 
   switch (size) {
-    case 'small':
-      this.button.classList.add('button-small');
+    case "small":
+      this.button.classList.add("button-small");
       break;
 
-    case 'large':
-      this.button.classList.add('button-large');
+    case "large":
+      this.button.classList.add("button-large");
       break;
   }
 
   if (title) {
-    this.button.setAttribute('title', title);
+    this.button.setAttribute("title", title);
   }
 
   if (classList.length > 0) {
@@ -75,7 +75,7 @@ export const Button = function({
   }
 
   if (func) {
-    this.button.addEventListener('click', () => {
+    this.button.addEventListener("click", () => {
       func();
     });
   }
@@ -83,47 +83,39 @@ export const Button = function({
   this.style = {};
 
   this.style.add = (style) => {
-
     if (style) {
-
       if (style.length > 0) {
         style.forEach((item) => {
           switch (item) {
-            case 'link':
-              this.button.classList.add('button-link');
+            case "link":
+              this.button.classList.add("button-link");
               break;
 
-            case 'line':
-              this.button.classList.add('button-line');
+            case "line":
+              this.button.classList.add("button-line");
               break;
 
-            case 'ring':
-              this.button.classList.add('button-ring');
+            case "ring":
+              this.button.classList.add("button-ring");
               break;
           }
         });
       }
-
     }
-
   };
 
   this.style.remove = () => {
+    this.button.classList.remove("button-link");
 
-    this.button.classList.remove('button-link');
+    this.button.classList.remove("button-line");
 
-    this.button.classList.remove('button-line');
-
-    this.button.classList.remove('button-ring');
-
+    this.button.classList.remove("button-ring");
   };
 
   this.style.update = (style) => {
-
     this.style.remove();
 
     this.style.add(style);
-
   };
 
   this.style.add(style);
@@ -137,25 +129,20 @@ export const Button = function({
   };
 
   this.deactive = () => {
-    this.button.classList.remove('active');
+    this.button.classList.remove("active");
   };
 
   this.active = () => {
-    this.button.classList.add('active');
+    this.button.classList.add("active");
   };
 
   this.text = (newText) => {
-
     this.buttonText.textContent = newText;
-
-  }
+  };
 
   this.wrap = () => {
     return form.wrap({
-      children: [
-        this.button
-      ]
+      children: [this.button],
     });
   };
-
 };

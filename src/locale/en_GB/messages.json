@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "nightTab",
+    "message": "UltraTab",
     "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab",
+    "message": "UltraTab",
     "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
@@ -1760,7 +1760,7 @@
     "description": "Button to upload backup to Google Drive."
   },
   "menuContentDataSyncDownload": {
-    "message": "Download and restore from Drive",
+    "message": "Restore from Drive",
     "description": "Button to download and restore backup from Google Drive."
   },
   "menuContentDataSyncDelete": {

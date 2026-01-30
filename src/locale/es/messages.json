@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "nightTab",
+    "message": "UltraTab",
     "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab",
+    "message": "UltraTab",
     "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
@@ -40,7 +40,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Salvado",
+    "message": "Guardados",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavStyle": {
@@ -96,7 +96,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavScaling": {
-    "message": "Escalada",
+    "message": "Escala",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavArea": {
@@ -204,7 +204,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavControls": {
-    "message": "Control S",
+    "message": "Controles",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataLabel": {
@@ -220,7 +220,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavClear": {
-    "message": "Claro",
+    "message": "Limpiar",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLanguageLabel": {
@@ -228,7 +228,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavSupportLabel": {
-    "message": "Apoyo",
+    "message": "Soporte",
     "description": "Label for the settings menu navigation."
   },
   "menuNavCoffeeLabel": {
@@ -260,7 +260,7 @@
     "description": "Radio for dark mode."
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Modo de luz",
+    "message": "Modo claro",
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
@@ -316,11 +316,11 @@
     "description": "Label for grey preset accent colour."
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "rojo",
+    "message": "Rojo",
     "description": "Label for red preset accent colour."
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "naranja",
+    "message": "Naranja",
     "description": "Label for orange preset accent colour."
   },
   "menuContentThemeAccentPresetColorYellow": {
@@ -396,7 +396,7 @@
     "description": "Checkbox for random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleAny": {
-    "message": "Ningún",
+    "message": "Cualquiera",
     "description": "Radio for any random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleLight": {
@@ -476,7 +476,7 @@
     "description": "Button for regular weight display font."
   },
   "menuContentThemeFontDisplayWeightBold": {
-    "message": "Audaz",
+    "message": "Negrita",
     "description": "Button for bold weight display font."
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
@@ -528,7 +528,7 @@
     "description": "Button for regular weight UI font."
   },
   "menuContentThemeFontUiWeightBold": {
-    "message": "Audaz",
+    "message": "Negrita",
     "description": "Button for bold weight UI font."
   },
   "menuContentThemeFontUiWeightHelperPara1": {
@@ -1768,7 +1768,7 @@
     "description": "Button to upload backup to Google Drive."
   },
   "menuContentDataSyncDownload": {
-    "message": "Descargar y restaurar desde Drive",
+    "message": "Restaurar desde Drive",
     "description": "Button to download and restore backup from Google Drive."
   },
   "menuContentDataSyncDelete": {
@@ -1968,12 +1968,20 @@
     "description": "Paragraph on this project being open source."
   },
   "menuContentAppLink2": {
-    "message": "Encontrado en GitHub.",
+    "message": "Disponible en GitHub.",
     "description": "Link to project on GitHub."
   },
   "menuContentAppLink3": {
     "message": "Licencia pública general GNU v3.0.",
-    "description": "Link to project project licence."
+    "description": "Link to project licence."
+  },
+  "menuContentAppForkInfo": {
+    "message": "Fork de nightTab.",
+    "description": "Link to old project on GitHub."
+  },
+  "menuContentAppForkLink": {
+    "message": "Descubre el proyecto original.",
+    "description": "Link to old project on GitHub."
   },
   "bookmarkTileControlLeft": {
     "message": "Mover este marcador a la izquierda",
@@ -2784,7 +2792,7 @@
     "description": "Button to cancel clear partial data."
   },
   "dataExportBackup": {
-    "message": "respaldo",
+    "message": "Respaldo",
     "description": "String for backup data file name."
   },
   "dataFeedbackEmpty": {
@@ -2808,7 +2816,7 @@
     "description": "Paragraph for when backup data in clipboard is not valid JSON."
   },
   "controlGeneralReset": {
-    "message": "Restablecen a los predeterminados",
+    "message": "Restablecer a valores predeterminados",
     "description": "Button for reset button control."
   },
   "controlColorTextPlaceholder": {
@@ -2836,7 +2844,7 @@
     "description": "Label for colour control lightness."
   },
   "controlColorMixerSliderR": {
-    "message": "rojo",
+    "message": "Rojo",
     "description": "Label for colour control red."
   },
   "controlColorMixerSliderG": {

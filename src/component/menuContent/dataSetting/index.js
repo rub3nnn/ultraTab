@@ -210,6 +210,8 @@ dataSetting.sync = (parent) => {
 
             showFeedback(message.get("menuContentDataSyncSuccessUpload"));
             updateStatusDisplay();
+            // Re-render to update button states
+            renderUI();
           } catch (error) {
             console.error("Failed to upload:", error);
             currentOperation = null;
@@ -230,6 +232,7 @@ dataSetting.sync = (parent) => {
       dataSetting.control.sync.downloadButton = new Button({
         text: message.get("menuContentDataSyncDownload"),
         style: ["line"],
+        disabled: lastUploadTime === null, // Disable if no backup exists
         func: async () => {
           if (isProcessing) return;
           isProcessing = true;
@@ -244,6 +247,7 @@ dataSetting.sync = (parent) => {
               currentOperation = null;
               showFeedback(message.get("menuContentDataSyncErrorNoData"), true);
               updateStatusDisplay();
+
               return;
             }
 
@@ -291,6 +295,7 @@ dataSetting.sync = (parent) => {
       dataSetting.control.sync.deleteButton = new Button({
         text: message.get("menuContentDataSyncDelete"),
         style: ["line"],
+        disabled: lastUploadTime === null, // Disable if no backup exists
         func: async () => {
           if (isProcessing) return;
 
@@ -308,6 +313,8 @@ dataSetting.sync = (parent) => {
             currentOperation = null;
             showFeedback(message.get("menuContentDataSyncSuccessDelete"));
             updateStatusDisplay();
+            // Re-render to update button states
+            renderUI();
           } catch (error) {
             console.error("Failed to delete:", error);
             showFeedback("Error al eliminar: " + error.message, true);

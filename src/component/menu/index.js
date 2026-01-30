@@ -63,9 +63,8 @@ menu.navData = [
     overscroll: true,
     sub: ["sync", "restore", "backup", "clear"],
   },
-  { name: "language", active: false, overscroll: false },
-  { name: "support", active: false, overscroll: false },
-  { name: "coffee", active: false, overscroll: false },
+  //{ name: "language", active: false, overscroll: false },
+  //{ name: "support", active: false, overscroll: false },
   { name: "app", active: false, overscroll: false },
 ];
 
