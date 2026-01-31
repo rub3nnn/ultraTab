@@ -71,9 +71,6 @@ const hideSplash = (splashContainer) => {
 
 // Initialize the application
 const initializeApp = async () => {
-  // Show splash screen
-  const splashContainer = showSplash();
-
   try {
     // Initialize basic components
     component.data.init();
@@ -93,25 +90,41 @@ const initializeApp = async () => {
     if (isFirstRun) {
       console.log("[Startup] First run detected");
 
+      // Show splash screen only on first run
+      const splashContainer = showSplash();
+
       // Try to authenticate and download from Google Drive
       const { authenticated, data } =
         await googleDriveService.initializeAndDownload();
 
-      // Hide splash
-      await hideSplash(splashContainer);
-
       if (authenticated && data) {
-        // User is authenticated and has data in Drive
+        // User is authenticated and has data in Drive - apply it immediately
         console.log("[Startup] Drive data found, applying...");
+        await hideSplash(splashContainer);
         component.data.restore(data);
+        component.data.save();
         await markFirstRunCompleted();
+        console.log(
+          "[Startup] Drive data applied successfully, reloading page...",
+        );
+        // Reload page to apply all visual changes
+        window.location.reload();
+        return;
       } else {
-        // Show welcome modal
+        // Show welcome modal with presets
         console.log("[Startup] Showing welcome modal");
+
+        // Transform splash into modal smoothly
         const welcomeModal = new WelcomeModal({
+          splashContainer: splashContainer,
           onComplete: async () => {
             await markFirstRunCompleted();
             console.log("[Startup] Setup completed");
+          },
+          onCancel: async () => {
+            // User closed modal without selecting - use default
+            await markFirstRunCompleted();
+            console.log("[Startup] Setup skipped, using default");
           },
         });
         welcomeModal.show();
@@ -132,14 +145,9 @@ const initializeApp = async () => {
         .catch((error) => {
           console.log("Google Drive initialization error:", error);
         });
-
-      // Hide splash after components are loaded
-      await hideSplash(splashContainer);
     }
   } catch (error) {
     console.error("[Startup] Error during initialization:", error);
-    // Hide splash even on error
-    await hideSplash(splashContainer);
   }
 };
 
