@@ -20,7 +20,8 @@ export const WelcomeModal = function ({
       id: 0,
       name: "Default",
       description: "Configuración predeterminada de " + APP_NAME,
-      thumbnail: null,
+      thumbnail:
+        "https://raw.githubusercontent.com/rub3nnn/ultraTab/main/asset/presets/preset-0.png",
       isDefault: true,
     },
     {

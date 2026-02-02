@@ -19,6 +19,9 @@ import { node } from "../../../utility/node";
 // Import GoogleDriveService
 import googleDriveService from "../../../service/GoogleDriveService.js";
 
+// Import splash screen functions
+import { showSplash, hideSplash } from "../../../index.js";
+
 const dataSetting = {};
 
 dataSetting.control = {
@@ -240,14 +243,18 @@ dataSetting.sync = (parent) => {
           clearFeedback();
           updateStatusDisplay();
 
+          // Show splash screen
+          const splashContainer = showSplash("Descargando desde Drive...");
+
           try {
             const cloudData = await googleDriveService.load();
 
             if (!cloudData) {
+              await hideSplash(splashContainer);
               currentOperation = null;
               showFeedback(message.get("menuContentDataSyncErrorNoData"), true);
               updateStatusDisplay();
-
+              isProcessing = false;
               return;
             }
 
@@ -271,12 +278,14 @@ dataSetting.sync = (parent) => {
             showFeedback(message.get("menuContentDataSyncSuccessDownload"));
             updateStatusDisplay();
 
-            // Reload the page to apply changes
+            // Hide splash and reload the page to apply changes
+            await hideSplash(splashContainer);
             setTimeout(() => {
               data.reload.render();
-            }, 1500);
+            }, 100);
           } catch (error) {
             console.error("Failed to download:", error);
+            await hideSplash(splashContainer);
             currentOperation = null;
             showFeedback(
               message.get("menuContentDataSyncErrorDownload") +

@@ -38,13 +38,13 @@ const markFirstRunCompleted = () => {
 };
 
 // Create and show fullscreen splash screen
-const showSplash = () => {
+export const showSplash = (text = "Inicializando...") => {
   const splash = new Splash();
   const splashContainer = node("div|class:splash-fullscreen", [
     splash.splash(),
     complexNode({
       tag: "p",
-      text: "Inicializando...",
+      text: text,
       attr: [{ key: "class", value: "splash-loading-text" }],
     }),
   ]);
@@ -55,7 +55,7 @@ const showSplash = () => {
 };
 
 // Remove splash screen
-const hideSplash = (splashContainer) => {
+export const hideSplash = (splashContainer) => {
   return new Promise((resolve) => {
     splashContainer.style.opacity = "0";
     splashContainer.style.transition = "opacity 0.5s ease-out";
@@ -100,13 +100,15 @@ const initializeApp = async () => {
       if (authenticated && data) {
         // User is authenticated and has data in Drive - apply it immediately
         console.log("[Startup] Drive data found, applying...");
-        await hideSplash(splashContainer);
         component.data.restore(data);
         component.data.save();
         await markFirstRunCompleted();
         console.log(
           "[Startup] Drive data applied successfully, reloading page...",
         );
+        // Hide splash and wait a bit before reload to ensure everything is saved
+        //await hideSplash(splashContainer);
+        await new Promise((resolve) => setTimeout(resolve, 100));
         // Reload page to apply all visual changes
         window.location.reload();
         return;
