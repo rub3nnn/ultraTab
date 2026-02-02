@@ -116,6 +116,14 @@ const initializeApp = async () => {
         // Show welcome modal with presets
         console.log("[Startup] Showing welcome modal");
 
+        //SKIP WHILE WELCOME MODAL NOT AVAILABLE
+
+        console.log("[TODO] Skipping welcome modal for now");
+        await hideSplash(splashContainer);
+        await markFirstRunCompleted();
+        console.log("[Startup] Setup completed, continuing...");
+
+        /*
         // Transform splash into modal smoothly
         const welcomeModal = new WelcomeModal({
           splashContainer: splashContainer,
@@ -130,6 +138,7 @@ const initializeApp = async () => {
           },
         });
         welcomeModal.show();
+        */
       }
     } else {
       // Not first run, just initialize Drive silently
