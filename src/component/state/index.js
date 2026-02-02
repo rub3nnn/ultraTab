@@ -145,6 +145,15 @@ state.default = {
         opacity: 30,
         vignette: { opacity: 40, start: 90, end: 70 },
       },
+      video: {
+        url: "",
+        blur: 0,
+        grayscale: 100,
+        scale: 100,
+        accent: 15,
+        opacity: 30,
+        vignette: { opacity: 40, start: 90, end: 50 },
+      },
     },
     opacity: { general: 0 },
     layout: {
