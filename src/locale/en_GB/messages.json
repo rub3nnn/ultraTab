@@ -8,7 +8,7 @@
     "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "A highly customizable new tab page featuring Google Drive Sync. Personalize your layout, theme, and bookmarks, and access them anywhere with ultraTab.",
+    "message": "Customizable new tab page with Google Drive Sync. Personalize layout, theme & bookmarks with ultraTab.",
     "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
