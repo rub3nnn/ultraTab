@@ -44,9 +44,9 @@ async function handleConnectToGoogleDrive() {
 // 3. SAVE DATA TO GOOGLE DRIVE
 // ============================================
 
-async function saveToGoogleDrive(nightTabState) {
+async function saveToGoogleDrive(ultraTabState) {
   try {
-    const result = await googleDriveService.save(nightTabState);
+    const result = await googleDriveService.save(ultraTabState);
 
     console.log(`✓ Data ${result.action} successfully`);
     console.log(`File ID: ${result.fileId}`);
@@ -68,7 +68,7 @@ async function saveToGoogleDrive(nightTabState) {
 }
 
 // Example: Save current state
-// const currentState = { /* your nightTab state object */ };
+// const currentState = { /* your ultraTab state object */ };
 // await saveToGoogleDrive(currentState);
 
 // ============================================
@@ -107,14 +107,14 @@ async function loadFromGoogleDrive() {
 
 let saveTimeout;
 
-function autoSaveToGoogleDrive(nightTabState) {
+function autoSaveToGoogleDrive(ultraTabState) {
   // Debounce: wait 2 seconds after last change before saving
   clearTimeout(saveTimeout);
 
   saveTimeout = setTimeout(async () => {
     if (googleDriveService.isAuthenticated()) {
       try {
-        await googleDriveService.save(nightTabState);
+        await googleDriveService.save(ultraTabState);
         console.log("✓ Auto-saved to Google Drive");
       } catch (error) {
         console.error("Auto-save failed:", error);
@@ -162,7 +162,7 @@ async function deleteGoogleDriveSyncFile() {
 // 8. COMPLETE SYNC FLOW EXAMPLE
 // ============================================
 
-class NightTabSyncManager {
+class UltraTabSyncManager {
   constructor() {
     this.lastSyncTime = null;
   }
@@ -183,7 +183,7 @@ class NightTabSyncManager {
       await googleDriveService.getAuthToken(true);
 
       // Upload current state
-      const currentState = this.getCurrentNightTabState();
+      const currentState = this.getCurrentUltraTabState();
       await googleDriveService.save(currentState);
 
       this.lastSyncTime = new Date();
@@ -200,12 +200,12 @@ class NightTabSyncManager {
 
       if (cloudData) {
         // Compare timestamps or versions
-        const localData = this.getCurrentNightTabState();
+        const localData = this.getCurrentUltraTabState();
 
         // Your merge logic here
         // For example, use the most recent data
         if (this.shouldUseCloudData(localData, cloudData)) {
-          this.applyNightTabState(cloudData);
+          this.applyUltraTabState(cloudData);
           console.log("✓ Applied cloud data");
         }
       }
@@ -221,7 +221,7 @@ class NightTabSyncManager {
     }
 
     try {
-      const currentState = this.getCurrentNightTabState();
+      const currentState = this.getCurrentUltraTabState();
       await googleDriveService.save(currentState);
       this.lastSyncTime = new Date();
       console.log("✓ Synced to Google Drive");
@@ -232,12 +232,12 @@ class NightTabSyncManager {
   }
 
   // Placeholder methods - implement based on your app structure
-  getCurrentNightTabState() {
-    // Return your current nightTab state object
+  getCurrentUltraTabState() {
+    // Return your current ultraTab state object
     return {};
   }
 
-  applyNightTabState(state) {
+  applyUltraTabState(state) {
     // Apply the state to your application
   }
 
@@ -257,5 +257,5 @@ export {
   autoSaveToGoogleDrive,
   disconnectFromGoogleDrive,
   deleteGoogleDriveSyncFile,
-  NightTabSyncManager,
+  UltraTabSyncManager,
 };

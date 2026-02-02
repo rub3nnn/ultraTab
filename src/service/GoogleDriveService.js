@@ -1,11 +1,11 @@
 /**
- * GoogleDriveService - Singleton service for syncing nightTab data to Google Drive
+ * GoogleDriveService - Singleton service for syncing ultraTab data to Google Drive
  *
  * Uses Chrome Identity API with seamless authentication flow:
  * - Attempts silent authentication first (using existing Chrome session)
  * - Falls back to interactive login only when necessary
  *
- * Stores data in Google Drive's hidden appDataFolder as nighttab_sync_data.json
+ * Stores data in Google Drive's hidden appDataFolder as ultraTab_sync_data.json
  */
 
 import { APP_NAME } from "../constant/index.js";
@@ -322,7 +322,7 @@ class GoogleDriveService {
   /**
    * Save JSON data to Google Drive
    * Creates new file if it doesn't exist, updates if it does
-   * @param {object} fullJsonState - Complete nightTab state to save
+   * @param {object} fullJsonState - Complete ultraTab state to save
    * @returns {Promise<{success: boolean, fileId: string, action: string}>}
    */
   async save(fullJsonState) {
