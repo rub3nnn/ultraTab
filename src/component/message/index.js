@@ -6,7 +6,7 @@ import { browserDetect } from "../browserDetect";
 // import { default as de } from '../../locale/de/messages.json';
 import { default as en_GB } from "../../locale/en_GB/messages.json";
 // import { default as en_US } from '../../locale/en_US/messages.json';
-// import { default as es } from '../../locale/es/messages.json';
+import { default as es } from '../../locale/es/messages.json';
 // import { default as fil } from '../../locale/fil/messages.json';
 // import { default as fr } from '../../locale/fr/messages.json';
 // import { default as gu } from '../../locale/gu/messages.json';
@@ -24,7 +24,29 @@ const message = {};
 
 message.language = {
   // pack: { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi }
-  pack: { en_GB },
+  pack: { en_GB, es },
+};
+
+message.locale = () => {
+  let locale = 'en-gb';
+  
+  if (browserDetect().chrome && typeof chrome != "undefined") {
+    if ("i18n" in chrome) {
+      const uiLang = chrome.i18n.getUILanguage();
+      if (uiLang) {
+        locale = uiLang.toLowerCase();
+      }
+    }
+  } else if (browserDetect().firefox && typeof browser != "undefined") {
+    if ("i18n" in browser) {
+      const uiLang = browser.i18n.getUILanguage();
+      if (uiLang) {
+        locale = uiLang.toLowerCase();
+      }
+    }
+  }
+  
+  return locale;
 };
 
 // message.language.list = () => {

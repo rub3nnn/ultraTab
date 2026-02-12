@@ -1,10 +1,12 @@
 import { state } from '../state';
+import { message } from '../message';
 
 import { node } from '../../utility/node';
 import { trimString } from '../../utility/trimString';
 import { isValidString } from '../../utility/isValidString';
 
 import moment from 'moment';
+import 'moment/locale/es';
 
 import './index.css';
 
@@ -27,7 +29,15 @@ export const Greeting = function() {
 
   this.update = () => {
 
-    const goodMessage = ['Good night', 'Good morning', 'Good afternoon', 'Good evening'];
+    const locale = message.locale();
+    moment.locale(locale);
+
+    const goodMessage = [
+      message.get('greetingGoodNight'),
+      message.get('greetingGoodMorning'),
+      message.get('greetingGoodAfternoon'),
+      message.get('greetingGoodEvening')
+    ];
 
     this.now = moment();
 

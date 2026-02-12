@@ -2,6 +2,7 @@ import { data } from "../data";
 import { state } from "../state";
 import { bookmark } from "../bookmark";
 import { groupAndBookmark } from "../groupAndBookmark";
+import { message } from "../message";
 
 import { Button } from "../button";
 import { Control_text } from "../control/text";
@@ -22,7 +23,7 @@ export const Search = function () {
       path: "header.search.string",
       id: "header-search-string",
       value: "",
-      placeholder: "Search Bookmarks or Search",
+      placeholder: message.get('searchPlaceholderWithBookmarks'),
       labelText: "Search",
       classList: ["search-input"],
       srOnly: true,
@@ -60,9 +61,9 @@ export const Search = function () {
     let placeholder = "";
 
     if (state.get.current().bookmark.show) {
-      placeholder = "Find bookmarks or search";
+      placeholder = message.get('searchPlaceholderWithBookmarks');
     } else {
-      placeholder = "Search";
+      placeholder = message.get('searchPlaceholderWithoutBookmarks');
     }
 
     this.element.input.text.placeholder = placeholder;

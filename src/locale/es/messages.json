@@ -1179,6 +1179,42 @@
     "message": "Apodo, alias o nombre de superhéroe",
     "description": "Placeholder for header greeting name."
   },
+  "greetingGoodNight": {
+    "message": "Buenas noches",
+    "description": "Good night greeting message."
+  },
+  "greetingGoodMorning": {
+    "message": "Buenos días",
+    "description": "Good morning greeting message."
+  },
+  "greetingGoodAfternoon": {
+    "message": "Buenas tardes",
+    "description": "Good afternoon greeting message."
+  },
+  "greetingGoodEvening": {
+    "message": "Buenas tardes",
+    "description": "Good evening greeting message."
+  },
+  "searchPlaceholderWithBookmarks": {
+    "message": "Buscar marcadores o buscar en la web",
+    "description": "Placeholder for search input when bookmarks are visible."
+  },
+  "searchPlaceholderWithoutBookmarks": {
+    "message": "Buscar",
+    "description": "Placeholder for search input when bookmarks are not visible."
+  },
+  "searchEmptyNoBookmarks": {
+    "message": "No se encontraron marcadores que coincidan con",
+    "description": "Message when no bookmarks match search."
+  },
+  "searchEmptyFound": {
+    "message": "",
+    "description": "Word for 'found' in search empty message."
+  },
+  "searchEmptyPressEnter": {
+    "message": "Presiona \"Enter\" para buscar",
+    "description": "Helper text to perform web search."
+  },
   "menuContentHeaderTransitionalShowLabel": {
     "message": "Mostrar palabras de transición",
     "description": "Checkbox to show header transitional text."
