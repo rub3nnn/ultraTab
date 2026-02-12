@@ -66,10 +66,6 @@ state.default = {
     search: {
       show: true,
       width: { by: "auto", size: 26 },
-      engine: {
-        selected: "google",
-        custom: { name: "", url: "", queryName: "" },
-      },
       text: { justify: "center" },
       size: 100,
       newLine: false,
