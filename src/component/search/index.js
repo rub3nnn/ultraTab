@@ -23,7 +23,7 @@ export const Search = function () {
       path: "header.search.string",
       id: "header-search-string",
       value: "",
-      placeholder: message.get('searchPlaceholderWithBookmarks'),
+      placeholder: message.get("searchPlaceholderWithBookmarks"),
       labelText: "Search",
       classList: ["search-input"],
       srOnly: true,
@@ -61,9 +61,9 @@ export const Search = function () {
     let placeholder = "";
 
     if (state.get.current().bookmark.show) {
-      placeholder = message.get('searchPlaceholderWithBookmarks');
+      placeholder = message.get("searchPlaceholderWithBookmarks");
     } else {
-      placeholder = message.get('searchPlaceholderWithoutBookmarks');
+      placeholder = message.get("searchPlaceholderWithoutBookmarks");
     }
 
     this.element.input.text.placeholder = placeholder;

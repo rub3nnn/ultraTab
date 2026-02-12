@@ -16,9 +16,11 @@ export const SearchEmpty = function () {
   };
 
   this.assemble = () => {
-    const searchValue = trimString(header.element.search.element.input.text.value);
-    this.element.description.textContent = `${message.get('searchEmptyNoBookmarks')} "${searchValue}" ${message.get('searchEmptyFound')}`;
-    this.element.helper.textContent = message.get('searchEmptyPressEnter');
+    const searchValue = trimString(
+      header.element.search.element.input.text.value,
+    );
+    this.element.description.textContent = `${message.get("searchEmptyNoBookmarks")} "${searchValue}" ${message.get("searchEmptyFound")}`;
+    this.element.helper.textContent = message.get("searchEmptyPressEnter");
 
     this.element.empty.appendChild(this.element.description);
 

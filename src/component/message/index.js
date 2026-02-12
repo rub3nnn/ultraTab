@@ -6,7 +6,7 @@ import { browserDetect } from "../browserDetect";
 // import { default as de } from '../../locale/de/messages.json';
 import { default as en_GB } from "../../locale/en_GB/messages.json";
 // import { default as en_US } from '../../locale/en_US/messages.json';
-import { default as es } from '../../locale/es/messages.json';
+import { default as es } from "../../locale/es/messages.json";
 // import { default as fil } from '../../locale/fil/messages.json';
 // import { default as fr } from '../../locale/fr/messages.json';
 // import { default as gu } from '../../locale/gu/messages.json';
@@ -28,8 +28,8 @@ message.language = {
 };
 
 message.locale = () => {
-  let locale = 'en-gb';
-  
+  let locale = "en-gb";
+
   if (browserDetect().chrome && typeof chrome != "undefined") {
     if ("i18n" in chrome) {
       const uiLang = chrome.i18n.getUILanguage();
@@ -45,7 +45,7 @@ message.locale = () => {
       }
     }
   }
-  
+
   return locale;
 };
 
