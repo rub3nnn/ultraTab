@@ -2,7 +2,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "7.6.1",
+  "version": "7.6.2",
   "manifest_version": 3,
   "key": "key",
   "default_locale": "en_GB",
