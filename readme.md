@@ -5,45 +5,60 @@
 <p align="center">
   <strong>A modern, customizable new tab page with Google Drive sync</strong>
   <br>
-  <em>Enhanced fork of nightTab with cloud synchronization capabilities</em>
+  <em>Your personalized start page, synchronized across all your devices</em>
 </p>
 
 <div align="center">
   
   <img src="./src/icon/icon-48.png" width="48px" height="48px">
   
+  [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-brightgreen?logo=googlechrome)](https://chromewebstore.google.com/detail/ultratab/fmjkcjmncilkpcedlicclbodchbcpnom)
+  
 </div>
 
 <p align="center">
-  A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in ultraTab -- a custom start page with the power of cloud synchronization.
+  A beautifully customizable new tab page with powerful cloud synchronization. Design your perfect start page with custom themes, bookmarks, widgets, and backgrounds -- all synced seamlessly across your devices.
 </p>
-
-<div align="center">
-
-|          Features          |                           Links                            |
-| :------------------------: | :--------------------------------------------------------: |
-| 🎨 **Customizable Themes** | [Original nightTab](https://github.com/zombieFox/nightTab) |
-
-</div>
 
 ---
 
-## 🌟 What's New in ultraTab
+## ✨ Key Features
 
-ultraTab is an enhanced fork of the popular nightTab extension, adding powerful cloud synchronization features:
+### ☁️ Cloud Synchronization
 
-- **☁️ Google Drive Integration**: Sync your bookmarks, themes, and settings across all your devices
-- **🔄 Real-time Sync**: Keep your tabs in perfect harmony everywhere
-- **🎨 All nightTab Features**: Enjoy all the customization options from the original nightTab
-- **🔒 Privacy First**: Your data stays in your Google Drive, you remain in control
+- **Google Drive Integration**: Automatic backup and sync of all your settings
+- **Multi-Device Support**: Access your personalized page from any device
+- **Real-time Sync**: Changes sync instantly across all your browsers
+- **Secure Storage**: Your data stays in your Google Drive, you control access
+
+### 🎨 Unlimited Customization
+
+- **Custom Themes**: Create and save unlimited color schemes
+- **Flexible Layouts**: Adjust spacing, alignment, and organization
+- **Rich Widgets**: Clock, date, greeting, search bar, and more
+- **Background Options**: Set images, videos, or solid colors
+
+### 🔖 Smart Bookmarks
+
+- **Visual Bookmarks**: Create icon-based bookmark tiles
+- **Organized Groups**: Arrange bookmarks in collapsible groups
+- **Custom Icons**: Use emojis, FontAwesome icons, or custom images
+- **Quick Access**: Search and filter your bookmarks instantly
+
+### 🔒 Privacy First
+
+- **No Tracking**: Zero analytics or user tracking
+- **Local First**: All data stored locally, sync is optional
+- **Your Control**: Choose what to sync and when
+- **Open Source**: Transparent codebase you can trust
 
 ---
 
 ## 📦 Installation
 
-### Chrome Web Store
+### Chrome Web Store (Recommended)
 
-🚧 **Coming Soon** - Chrome extension currently in development
+👉 **[Install ultraTab from Chrome Web Store](https://chromewebstore.google.com/detail/ultratab/fmjkcjmncilkpcedlicclbodchbcpnom)**
 
 ### Manual Installation
 
@@ -55,47 +70,79 @@ ultraTab is an enhanced fork of the popular nightTab extension, adding powerful 
 
 ---
 
-## Core Features (from nightTab)
+## 🚀 Getting Started
 
-- [Project goals](https://github.com/zombieFox/nightTab/wiki/Project-goals)
-- [Applying bookmark settings to all](https://github.com/zombieFox/nightTab/wiki/Applying-bookmark-settings-to-all)
-- [Browser support](https://github.com/zombieFox/nightTab/wiki/Browser-support)
-- [Cookies and cache](https://github.com/zombieFox/nightTab/wiki/Cookies-and-cache)
-- [Data backup and restore](https://github.com/zombieFox/nightTab/wiki/Data-backup-and-restore)
-- [Local background image](https://github.com/zombieFox/nightTab/wiki/Local-background-image)
-- [Protected URLs](https://github.com/zombieFox/nightTab/wiki/Protected-URLs)
-- [Recovering settings and bookmarks](https://github.com/zombieFox/nightTab/wiki/Recovering-settings-and-bookmarks)
-- [Resetting when opening the browser](https://github.com/zombieFox/nightTab/wiki/Resetting-when-opening-the-browser)
-- [Respecting your privacy](https://github.com/zombieFox/nightTab/wiki/Respecting-your-privacy)
-- [Setting a background video or image](https://github.com/zombieFox/nightTab/wiki/Setting-a-background-video-or-image)
-
-## ultraTab Exclusive Features
-
-### Google Drive Sync
-
-- **Automatic Backup**: Your settings and bookmarks are automatically backed up to Google Drive
-- **Multi-Device Sync**: Access your personalized start page from any device
-- **Secure Storage**: All data is stored in your personal Google Drive account
+1. **Install the extension** from the Chrome Web Store
+2. **Customize your page** using the settings menu (gear icon)
+3. **Add bookmarks** by clicking the "+" button
+4. **Enable Google Drive sync** (optional) to backup and sync across devices
+5. **Explore themes** and presets to find your perfect style
 
 ---
 
-# 🛠️ Development
+## 🔄 Google Drive Sync Setup
 
-# 🛠️ Development
+1. Open ultraTab settings
+2. Navigate to "Data" section
+3. Click "Connect to Google Drive"
+4. Authorize ultraTab to access your Drive
+5. Your settings will automatically sync across devices
+
+Your data is stored securely in your Google Drive and only you have access to it.
+
+---
+
+## 📋 Feature Highlights
+
+### Widgets & Components
+
+- Digital/analog clock with timezone support
+- Customizable greeting messages
+- Search bar with multiple engine support
+- Weather widget (coming soon)
+- Notes and quick links
+
+### Theme System
+
+- Pre-built theme presets
+- Custom color schemes
+- Accent color picker
+- Dark/light mode support
+- Font customization
+
+### Bookmark Management
+
+- Drag-and-drop organization
+- Import/export functionality
+- URL validation
+- Nested groups
+- Custom layouts (grid/list views)
+
+### Background Options
+
+- Local image upload
+- Unsplash integration
+- Video backgrounds
+- Gradient backgrounds
+- Opacity and blur controls
+
+---
+
+## 🛠️ Development
 
 ### Development Server
 
-When developing use:
+When developing, use:
 
 ```bash
 npm start
 ```
 
-A development server will automatically open the project in your browser. Normally here: `http://localhost:8080`.
+A development server will automatically open the project in your browser at `http://localhost:8080`.
 
 ### Building for Production
 
-To build the project use:
+To build the project:
 
 ```bash
 npm run build
@@ -104,46 +151,65 @@ npm run build
 This will create:
 
 - A web ready folder in `/dist/web/`
-- A browser addon/extension ready zip in `/dist/extension/`
+- A browser extension ready zip in `/dist/extension/`
 
 ---
 
-# 📸 Screenshots
+## 💡 Tips & Tricks
+
+- **Keyboard Shortcuts**: Press `?` to view all available keyboard shortcuts
+- **Quick Edit**: Double-click any bookmark to edit it quickly
+- **Bulk Operations**: Use the "Apply to all" option to style all bookmarks at once
+- **Theme Export**: Share your custom themes by exporting and sharing the JSON file
+- **Backup Regularly**: Even with cloud sync, export your data occasionally for extra safety
+
+---
 
 <div align="center">
   
   <img src="./src/icon/icon-128.png" width="96px" height="96px">
   
-  ### Gallery Coming Soon
+  ### Endless Customization Possibilities
   
-  <em>ultraTab inherits all the beautiful customization options from nightTab</em>
+  <em>Create your perfect start page with ultraTab</em>
   
 </div>
 
-## Original nightTab Examples
+---
 
-These setups showcase the flexibility of the platform. ultraTab supports all these customization options plus cloud sync!
+## ❓ FAQ
 
-- [Where to find these setups](https://github.com/zombieFox/nightTab/tree/main/asset/screenshot)
-- [How to import these setups](https://github.com/zombieFox/nightTab/wiki/Data-backup-and-restore#restore-data)
+**Q: Is my data safe with cloud sync?**  
+A: Yes! All data is stored in your personal Google Drive account. We never have access to your information.
 
-[![nightTab Demo](asset/screenshot/screenshot-003.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-004.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-005.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-006.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-007.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-008.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-009.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-010.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-011.png)](https://zombiefox.github.io/nightTab/)
+**Q: Can I use ultraTab without Google Drive sync?**  
+A: Absolutely! Cloud sync is completely optional. ultraTab works perfectly as a local-only extension.
+
+**Q: Will this work on other browsers?**  
+A: Currently optimized for Chrome. Firefox and Edge support coming soon.
+
+**Q: How do I import my bookmarks?**  
+A: Use the import function in settings to import from JSON, or manually add bookmarks using the UI.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
 ## 🙏 Credits
 
-ultraTab is built upon the excellent foundation of [nightTab](https://github.com/zombieFox/nightTab) by [zombieFox](https://github.com/zombieFox).
+ultraTab is built upon the excellent foundation of [nightTab](https://github.com/zombieFox/nightTab) by [zombieFox](https://github.com/zombieFox). We're grateful for the amazing work that made this project possible.
 
-- Original nightTab: [GitHub](https://github.com/zombieFox/nightTab) | [Demo](https://zombiefox.github.io/nightTab/)
+- Original project: [nightTab on GitHub](https://github.com/zombieFox/nightTab) | [Demo](https://zombiefox.github.io/nightTab/)
 - Support the original creator: [Buy zombieFox a coffee](https://www.buymeacoffee.com/zombieFox/)
 - Join the community: [r/nighttab](https://www.reddit.com/r/nighttab/)
 
@@ -151,12 +217,16 @@ ultraTab is built upon the excellent foundation of [nightTab](https://github.com
 
 ## 📄 License
 
-This project maintains the same license as the original nightTab project.
+This project maintains the same open-source license as the original nightTab project.
 
 ---
 
 <div align="center">
   
-  **Made with** <img src="./src/icon/icon-16.png" width="16px" height="16px"> **by the nightTab community**
+  **[Install ultraTab Now](https://chromewebstore.google.com/detail/ultratab/fmjkcjmncilkpcedlicclbodchbcpnom)** ⭐
+  
+  <br>
+  
+  <sub>Made with <img src="./src/icon/icon-16.png" width="16px" height="16px"> by the community</sub>
   
 </div>
